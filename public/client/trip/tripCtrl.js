@@ -8,17 +8,12 @@ angular.module('canteen.trip', [])
       $scope.trip = tripData;
       $scope.dates = {
         start: moment($scope.trip.dates.start).format('MMM Do, YYYY'),
-        end: moment($scope.trip.dates.end).format('MMM Do, YYYY')
+        end: moment($scope.trip.dates.end).format('MMM Do, YYYY'),
       };
     });
 
     $scope.color = {
       colors: ['red', 'blue', 'purple', 'green', 'orange'],
     };
-
-    // NgMap.getMap().then(function (map) {
-    // });
-
-    // add call to get trip once factory method is available
   },
 ]);

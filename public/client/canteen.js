@@ -10,7 +10,7 @@ angular.module('canteen', [
   'ui.bootstrap',
   'ui.router',
 ])
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function ($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/landing-page');
   $stateProvider
     .state('landingPage', {
@@ -21,26 +21,11 @@ angular.module('canteen', [
     .state('tripForm', {
       url: '/trip-form',
       templateUrl: 'client/trip-form/tripForm.html',
-      controller: 'tripForm'
+      controller: 'tripForm',
     })
     .state('tripView', {
       url: '/trip',
       templateUrl: 'client/trip/tripView.html',
       controller: 'tripCtrl',
     });
-    // .state('listView', {
-    //   url: '/list/{listName}',
-    //   templateUrl: 'client/list-view/listView.html',
-    //   controller: 'listView',
-    // })
-    // .state('taskForm', {
-    //   url: '/task-form',
-    //   templateUrl: 'client/task-form/taskForm.html',
-    //   controller: 'taskForm'
-    // });
-    // .state('tripForm.lists', {
-    //   url: "/lists",
-    //   templateUrl: "client/trip-form/tripFormLists.html",
-    //   controller: TBD
-    // });
 });
